@@ -15,14 +15,12 @@ Como ejercicio adicional y completamente opcional, al terminar de resolver este 
 */
 
   function nFactorial(n) {
-    if(n<=1) return n
-    else return n * nFactorial(n - 1);
+
     }
 
 
 function nFibonacci(n) { 
-  if (n<= 1) return n
-  return nFibonacci(n - 1) + nFibonacci(n - 2);
+
 }
 
 nFibonacci(5)
@@ -45,15 +43,7 @@ function Queue() {
               /* 0 1 2 3 4  */
   
 }
-Queue.prototype.size = function(){
-  return this.array.length
-}
-Queue.prototype.enqueue = function(elem) {
-this.array.push(elem)
-}
-Queue.prototype.dequeue = function(elem){
-return this.array.shift(elem)
-}
+
 
 // No modifiquen nada debajo de esta linea
 // --------------------------------
