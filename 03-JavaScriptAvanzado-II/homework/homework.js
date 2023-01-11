@@ -37,13 +37,10 @@ var counterFunction = counter();
 var counterOne = counter();
 var counterTwo = counter()
 */
-var suma = 0
-return function nuevo (){
-  return ++suma
+
 }
 }
-var contador = counter()
-contador()//?
+
 
 
 function cacheFunction(cb) {
@@ -77,13 +74,6 @@ function cacheFunction(cb) {
 
  let cache={ }
  return function operacion(arg){
-    if(cache.hasOwnProperty(arg)){
-      return cache[arg]
-    }else{
-      cache[arg/*2 */]=cb(arg)//"a"*2
-      return cache[arg]//NaN
-    }
- }
 
 }
 
@@ -116,8 +106,7 @@ function getNombre() {
 
   */
 
-let getNombreInstructor= getNombre.bind(instructor);
-let getNombreAlumno= getNombre.bind(alumno);
+
 
 /*
   Ejercicio 4
@@ -129,10 +118,10 @@ function crearCadena(delimitadorIzquierda, delimitadorDerecha, cadena) {
   return delimitadorIzquierda + cadena + delimitadorDerecha;
 }
 
-let textoAsteriscos = crearCadena.bind(this,"*","*");
+let textoAsteriscos 
 
-let textoGuiones = crearCadena.bind(this,"-","-");
-let textoUnderscore = crearCadena.bind(this,"_","_",);
+let textoGuiones 
+let textoUnderscore 
 textoUnderscore()
 // No modifiquen nada debajo de esta linea
 // --------------------------------
