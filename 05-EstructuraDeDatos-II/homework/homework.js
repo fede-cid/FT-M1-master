@@ -17,41 +17,13 @@ function LinkedList() {
   }
   
   function Node(value) {
-    this.value=value;
-    this.next=null;
+
   }
   LinkedList.prototype.add=function(value){
-    const nodito = new Node(value)
-    if(!this.head){
-      this.head= nodito
-    }else{
-      let current = this.head
-      while(current.next){
-        current=current.next
-      }
-      current.next= nodito
-      return nodito
-    }
+
   }
 
 LinkedList.prototype.remove= function(){
-  if(this.head==null){
-  return null;
-  }if(this.head.next==null){ // si mi primer nodo su next es null
-    let save= {}//
-    save = this.head.value// guarda el valor de ese node en save cortando la funcion
-    this.head= null// estas borrando el primer nodo
-    return save
-  }else {//si el primer nodo si tiene un valor en next ejecuto esto
-    let current = this.head//me posiciono en le primer nodo sabeiendo que existe un segundo
-    let save = {}
-    while(current.next){//si existe current. next hace...
-      if(!current.next.next== null) //si current.next.next es distinto de null
-      current=current.next//posiciona a current en el sigueinte nodo
-      else (current.next.next== null)//si current.next.next es igual a null 
-       save = current.next.value//guarda y devolveme el valor de current. next
-       current.next= null
-       return save
 
     }
   }
@@ -70,20 +42,7 @@ SERCH(7)----------------------DEVUELVE NULL*/
 
 //search(10)
 LinkedList.prototype.search= function(value){
-  if(!this.head) return null;// si el head es null devolveme null
-  let current= this.head;//creamos nuestro posicionador diciendo que current es head
-  while(current){//mientras current existe o es true
-    //HEAD -> value:1 next:{value:2 next:{value:3 next:{value:cb() next: null}}
-    if(current.value=== value) // 
-    return current.value;// deveolveme ese valor
-    else if(typeof value == 'function') {//
-      if(value(current.value)){//
-        return current.value// return la funcion
-      }
-    }
-    current = current.next//
-  } 
-  return null//
+
 }
 
 /*
@@ -103,36 +62,24 @@ Ejemplo: supongamos que quiero guardar {instructora: 'Ani'} en la tabla. Primero
 
 
 function HashTable(buckets){
-  this.numBuckets= buckets || 35;
-  this.data = new Array(this.numBuckets);
+
 };
 
 
 HashTable.prototype.hash = function(key) {
-  let sumar= 0;
-  for (let i = 0; i < key.length; i++) {
-     sumar += key.charCodeAt(i);
-    
-  }
-  return sumar%35
+
 }
 
 HashTable.prototype.set = function(key,value) {
- if(typeof key !== "string") throw new TypeError('Keys must be strings');
-  let j = this.hash(key);
 
- if(this.data[j]=== undefined){
-  this.data[j]= {};
  }
- this.data[j][key] = value;
+ 
 }
 HashTable.prototype.get = function(key) {
-let j = this.hash(key)
-return this.data[j][key]
+
 }
 HashTable.prototype.hasKey = function(key) {
-  let j = this.hash(key)
-return this.data[j].hasOwnProperty(key);
+
 }
 // No modifiquen nada debajo de esta linea
 // --------------------------------
